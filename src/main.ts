@@ -30,6 +30,7 @@ async function bootstrap() {
       filter: true,
       showRequestDuration: true,
     },
+    customSiteTitle:"Teslo Shop Documentation",    
     customCssUrl:"/swagger-ui/SwaggerDark.css"
   });
 

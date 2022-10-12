@@ -18,8 +18,8 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   const config = new DocumentBuilder()
-    .setTitle('Proyect Salud API')
-    .setDescription('Proyect Salud API description')
+    .setTitle('Proyect Teslo Shop API')
+    .setDescription('Proyect Teslo Shop description')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
@@ -29,7 +29,8 @@ async function bootstrap() {
     swaggerOptions: {
       filter: true,
       showRequestDuration: true,
-    }
+    },
+    customCssUrl:"/swagger-ui/SwaggerDark.css"
   });
 
 

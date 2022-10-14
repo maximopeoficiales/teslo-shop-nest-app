@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from './config/config.module';
 import { ProductsModule } from './products/products.module';
+import { CommonModule } from './common/common.module';
 
 @Module({
   imports: [
@@ -24,7 +25,8 @@ import { ProductsModule } from './products/products.module';
       // entities: [],
       synchronize: true,
     }),
-    ProductsModule,],
+    ProductsModule,
+    CommonModule,],
   controllers: [AppController],
   providers: [AppService],
 })

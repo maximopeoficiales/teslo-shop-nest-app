@@ -17,13 +17,21 @@ export class CreateProductDto {
   sizes: string[];
 
   @ApiProperty({
+    example: ["shirt", "food", "tech"],
+  })
+  @IsString({ each: true })
+  @IsArray()
+  @IsOptional()
+  tags?: string[];
+
+  @ApiProperty({
     examples: ["men", "women", "kid", "unisex"]
   })
   @IsIn(["men", "women", "kid", "unisex"])
   gender: string;
 
   @ApiProperty({
-    example:"product_1"
+    example: "product_1"
   })
   @IsString()
   @MinLength(1)
